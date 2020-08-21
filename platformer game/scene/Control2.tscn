@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://font/riskofrainfont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://menu scripts/lvlnex.gd" type="Script" id=2]
+[ext_resource path="res://menu scripts/mainmenu2.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="lvlcomplete" type="Control"]
+margin_left = 3.36353
+margin_top = -1.68176
+margin_right = 1287.36
+margin_bottom = 721.318
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.41418
+margin_right = 1275.41
+margin_bottom = 721.0
+color = Color( 0.160784, 0.160784, 0.160784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lvlnex" type="Button" parent="."]
+margin_left = 461.514
+margin_top = 322.417
+margin_right = 808.514
+margin_bottom = 383.417
+custom_fonts/font = SubResource( 1 )
+text = "NEXT LEVEL"
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainmenu" type="Button" parent="."]
+margin_left = 465.757
+margin_top = 427.069
+margin_right = 796.757
+margin_bottom = 497.069
+custom_fonts/font = SubResource( 2 )
+text = "MAIN MENU"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 400.048
+margin_top = 23.9729
+margin_right = 865.048
+margin_bottom = 187.973
+custom_fonts/font = SubResource( 3 )
+text = "LEVEL COMPLETE"
+align = 1
+valign = 1
+[connection signal="pressed" from="lvlnex" to="lvlnex" method="_on_lvlnex_pressed"]
+[connection signal="pressed" from="mainmenu" to="mainmenu" method="_on_mainmenu_pressed"]
